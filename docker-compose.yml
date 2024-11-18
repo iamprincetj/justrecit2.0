@@ -1,0 +1,29 @@
+services:
+  justrecit:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - 5173:5173
+    environment:
+      - clientSecret=${clientSecret}
+      - clientId=${clientId}
+      - apiKey=${apiKey}
+      - authDomain=${authDomain}
+      - projectId=${projectId}
+      - storageBucket=${storageBucket}
+      - messagingSenderId=${messagingSenderId}
+      - appId=${appId}
+    container_name: justrecit-production
+
+  nginx:
+    image: nginx
+    ports:
+      - 8080:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - justrecit
+    container_name: justrecit-nginx
