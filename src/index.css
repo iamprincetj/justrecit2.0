@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'KumbhSans-Var';
-  src: url('fonts/Kumbh_Sans/KumbhSans-VariableFont_YOPQ\,wght.ttf');
+  src: url('/fonts/Kumbh_Sans/KumbhSans-VariableFont_YOPQ,wght.ttf');
 }
 
 :root {

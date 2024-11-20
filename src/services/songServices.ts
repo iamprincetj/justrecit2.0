@@ -1,7 +1,7 @@
 import axios from "axios";
 import { tokenUrl } from "../constants";
-const clientId = process.env.clientId;
-const clientSecret = process.env.clientSecret;
+const clientId = process.env.CLIENT_ID;
+const clientSecret = process.env.CLIENT_SECRET;
 
 export const getToken = async () => {
   const data = new URLSearchParams();

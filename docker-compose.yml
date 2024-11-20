@@ -8,14 +8,14 @@ services:
     ports:
       - 5173:5173
     environment:
-      - clientSecret=${clientSecret}
-      - clientId=${clientId}
-      - apiKey=${apiKey}
-      - authDomain=${authDomain}
-      - projectId=${projectId}
-      - storageBucket=${storageBucket}
-      - messagingSenderId=${messagingSenderId}
-      - appId=${appId}
+      - CLIENT_SECRET=${CLIENT_SECRET}
+      - CLIENT_ID=${CLIENT_ID}
+      - API_KEY=${API_KEY}
+      - AUTH_DOMAIN=${AUTH_DOMAIN}
+      - PROJECT_ID=${PROJECT_ID}
+      - STORAGE_BUCKET=${STORAGE_BUCKET}
+      - MESSAGING_SENDER_ID=${MESSAGING_SENDER_ID}
+      - APP_ID=${APP_ID}
     container_name: justrecit-production
 
   nginx:
